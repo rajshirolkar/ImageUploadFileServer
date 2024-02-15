@@ -4,19 +4,58 @@ This server is built using FastAPI to facilitate image uploads from ESP32 CAM de
 
 ## Setup
 
-Before interacting with the server, ensure you have FastAPI and Uvicorn installed. You can install these dependencies using pip:
+To set up your environment and run the server, follow these steps:
+
+### 1. Create a Virtual Environment
+
+First, navigate to your project directory in the terminal and create a virtual environment. This will isolate your project's dependencies from other projects.
+
+- For **Windows**:
+
+```bash
+python -m venv venv
+```
+
+- For **macOS** and **Linux**:
+
+```bash
+python3 -m venv venv
+```
+
+### 2. Activate the Virtual Environment
+
+Next, activate the virtual environment:
+
+- For **Windows**:
+
+```bash
+.\venv\Scripts\activate
+```
+
+- For **macOS** and **Linux**:
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+With your virtual environment activated, install FastAPI, Uvicorn, and `python-multipart` using pip:
 
 ```bash
 pip install fastapi uvicorn python-multipart
 ```
 
-To start the server, run:
+### 4. Run the Server
+
+To start the server, simply run the `app.py` file. If you named your application file differently, replace `app.py` with your file name:
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 This command starts the server on `http://0.0.0.0:8000`, making it accessible on your local network.
+
 
 ## Uploading Images
 
